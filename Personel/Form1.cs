@@ -76,5 +76,6 @@ namespace Personel
 
             return (new Regex(strRegex)).IsMatch(inputEmail);
         }
+
     }
 }

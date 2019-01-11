@@ -31,6 +31,23 @@ namespace DAL
             return kayitSayisi;
         }
        
+        public int LoginKontrol(User u)
+        {
+            int kayitSayisi = 0;
+            
+
+            var user = con.Query<User>("Select uid,email,islogin from Users where email=@email and password=@password",new { @email=u.email,@password=u.password});
+
+            if (user.Count()>0)
+            {
+                kayitSayisi = 1;
+
+            }
+           
+            return kayitSayisi;
+
+
+        }
 
     }
 }
