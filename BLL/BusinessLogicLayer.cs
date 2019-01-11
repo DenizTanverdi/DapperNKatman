@@ -24,7 +24,7 @@ namespace BLL
                 p.Soyad = soyad;
                 p.Telefon = string.IsNullOrEmpty(telefon)?"":telefon;
                 p.email = email;
-                p.maas = maas;
+                p.maas = (maas>0)?maas:2020;
                 p.sehir = sehir;
                 p.departman = departman;
             }
