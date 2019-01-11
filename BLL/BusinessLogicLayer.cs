@@ -17,6 +17,7 @@ namespace BLL
         //@ad = p.Ad, @soyad = p.Soyad, @telefon = p.Telefon, @email = p.email, @maas = p.maas, @sehir = p.sehir, @departman = p.departman 
         public int PersonelKaydet(string ad, string soyad, string telefon, string email,int maas, string sehir, string departman)
         {
+            int kayitSayisi;
             Personel p = new Personel();
             if (!string.IsNullOrEmpty(ad) && !string.IsNullOrEmpty(soyad) && !string.IsNullOrEmpty(email) && !string.IsNullOrEmpty(departman))
             {
@@ -25,10 +26,16 @@ namespace BLL
                 p.Telefon = string.IsNullOrEmpty(telefon)?"":telefon;
                 p.email = email;
                 p.maas = (maas>0)?maas:2020;
-                p.sehir = sehir;
+                p.sehir = string.IsNullOrEmpty(sehir) ? "" : sehir;
                 p.departman = departman;
+                dal.PersonelKaydet(p);
+                kayitSayisi = 1;
             }
-            return 1;
+            else
+            {
+                kayitSayisi = -1;
+            }
+            return kayitSayisi;
         }
     }
 }

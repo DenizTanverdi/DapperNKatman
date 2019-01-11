@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Dapper;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.Text.RegularExpressions;
 
 namespace DAL
 {
@@ -17,15 +18,19 @@ namespace DAL
         SqlDataReader rdr;
         public DataAccessLayer()
         {
-            con = new SqlConnection(ConfigurationManager.ConnectionStrings["SqlServer"].ConnectionString);
-
+           // con = new SqlConnection(ConfigurationManager.ConnectionStrings["sql"].ConnectionString);
+            string adres = "Data Source=SEM-BILGISAYAR;Initial Catalog=test;User ID=test2 ;Password=test2";
+           con = new SqlConnection(adres);
         }
         public int PersonelKaydet(Personel p)
         {
+            int kayitSayisi = 0;
             string sql = "Insert into Calisan (Ad,Soyad,telefon,email,maas,sehir,departman)Values(@ad,@soyad,@telefon,@email,@maas,@sehir,@departman)";
-            con.Execute(sql, new { @ad = p.Ad, @soyad = p.Soyad, @telefon = p.Telefon, @email = p.email, @maas = p.maas, @sehir = p.sehir, @departman = p.departman });
-            return 1;
+            
+          kayitSayisi=  con.Execute(sql, new { @ad = p.Ad, @soyad = p.Soyad, @telefon = p.Telefon, @email = p.email, @maas = p.maas, @sehir = p.sehir, @departman = p.departman });
+            return kayitSayisi;
         }
+       
 
     }
 }
