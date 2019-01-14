@@ -31,5 +31,19 @@ namespace Personel
         {
             System.Windows.Forms.Application.Exit();
         }
+
+        private void personelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form1 personel = new Form1();
+            personel.MdiParent = this;
+            personel.Show();
+        }
+
+        private void firmalarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Firmalar f = new Firmalar();
+            f.MdiParent = this;
+            f.Show();
+        }
     }
 }

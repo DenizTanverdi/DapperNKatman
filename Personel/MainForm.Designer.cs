@@ -32,6 +32,7 @@
             this.verilerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.personelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.marsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.firmalarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,7 +50,8 @@
             // 
             this.verilerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.personelToolStripMenuItem,
-            this.marsToolStripMenuItem});
+            this.marsToolStripMenuItem,
+            this.firmalarToolStripMenuItem});
             this.verilerToolStripMenuItem.Name = "verilerToolStripMenuItem";
             this.verilerToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.verilerToolStripMenuItem.Text = "Veriler";
@@ -59,6 +61,7 @@
             this.personelToolStripMenuItem.Name = "personelToolStripMenuItem";
             this.personelToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.personelToolStripMenuItem.Text = "Personel";
+            this.personelToolStripMenuItem.Click += new System.EventHandler(this.personelToolStripMenuItem_Click);
             // 
             // marsToolStripMenuItem
             // 
@@ -66,6 +69,13 @@
             this.marsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.marsToolStripMenuItem.Text = "Mars";
             this.marsToolStripMenuItem.Click += new System.EventHandler(this.marsToolStripMenuItem_Click_1);
+            // 
+            // firmalarToolStripMenuItem
+            // 
+            this.firmalarToolStripMenuItem.Name = "firmalarToolStripMenuItem";
+            this.firmalarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.firmalarToolStripMenuItem.Text = "Firmalar";
+            this.firmalarToolStripMenuItem.Click += new System.EventHandler(this.firmalarToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -91,5 +101,6 @@
         private System.Windows.Forms.ToolStripMenuItem verilerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem personelToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem marsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem firmalarToolStripMenuItem;
     }
 }
