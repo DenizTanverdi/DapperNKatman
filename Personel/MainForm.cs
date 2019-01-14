@@ -16,5 +16,15 @@ namespace Personel
         {
             InitializeComponent();
         }
+
+      
+
+        private void marsToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            MarsForm mars = new MarsForm();
+            mars.MdiParent = this;
+            mars.Show();
+
+        }
     }
 }
