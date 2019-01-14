@@ -83,6 +83,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>testDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="testDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>testDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="testDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>testDataSet2.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Firmalar.resx">
       <DependentUpon>Firmalar.cs</DependentUpon>
     </EmbeddedResource>
@@ -128,6 +138,28 @@
     </None>
     <None Include="testDataSet.xss">
       <DependentUpon>testDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="testDataSet1.xsc">
+      <DependentUpon>testDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="testDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>testDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="testDataSet1.xss">
+      <DependentUpon>testDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="testDataSet2.xsc">
+      <DependentUpon>testDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="testDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>testDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="testDataSet2.xss">
+      <DependentUpon>testDataSet2.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

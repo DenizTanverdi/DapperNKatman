@@ -29,16 +29,6 @@ namespace Personel
         {
             // TODO: This line of code loads data into the 'testDataSet.Firma' table. You can move, or remove it, as needed.
             this.firmaTableAdapter.Fill(this.testDataSet.Firma);
-            // TODO: This line of code loads data into the 'testDataSet.Firma' table. You can move, or remove it, as needed.
-            this.firmaTableAdapter.Fill(this.testDataSet.Firma);
-
-        }
-
-        private void firmaBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.firmaBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.testDataSet);
 
         }
     }
