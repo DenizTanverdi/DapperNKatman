@@ -17,6 +17,6 @@ namespace DAL
         public string sehir { get; set; }
         public string departman { get; set; }
 
-
+        //
     }
 }
